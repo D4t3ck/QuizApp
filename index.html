@@ -22,7 +22,7 @@
     ></script>
   </head>
 
-  <body>
+  <body onload="init()">
     <!-- As a heading -->
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
@@ -30,19 +30,47 @@
       </div>
     </nav>
 
+    <!-- Card -->
     <div class="container">
-      <div class="card" style="width: 18rem">
-        <img src="..." class="card-img-top" alt="..." />
+      <div class="card quiz-card">
+        <img src="./img/pencil.jpg" class="card-img-top"/>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title" id="questiontext">Frage</h5>
+          
+          <div class="card mb-2">
+            <div class="card-body" id="answer_1">
+              This is some text within a card body.
+            </div>
+          </div>
+
+          <div class="card mb-2">
+            <div class="card-body" id="answer_2">
+              This is some text within a card body.
+            </div>
+          </div>
+
+          <div class="card mb-2">
+            <div class="card-body" id="answer_3">
+              This is some text within a card body.
+            </div>
+          </div>
+
+          <div class="card mb-2">
+            <div class="card-body" id="answer_4">
+              This is some text within a card body.
+            </div>
+          </div>
+          
+          <div class="question-footer">
+            <span>
+            <b>1</b> von <b id="all-questions">5</b> Fragen
+          </span>
+            <button class="btn btn-primary">Nächste Frage</button>
+          </div>
+
         </div>
       </div>
     </div>
-    
+
   </body>
 </html>

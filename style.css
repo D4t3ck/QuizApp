@@ -3,8 +3,8 @@ html {
 }
 
 body {
-    margin: 0;
-    padding: 0;
+   /*  margin: 0;
+    padding: 0; */
     background-color: #017AFF !important;
 }
 
@@ -14,4 +14,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.quiz-card {
+    width: 30rem;
+}
+
+.question-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
 }

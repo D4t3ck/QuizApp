@@ -76,11 +76,17 @@ function showQuestion() {
   document.getElementById("answer_3").innerHTML = question["answer_3"];
   document.getElementById("answer_4").innerHTML = question["answer_4"];
 }
-/* function showAnsweres() {
-    let answer = questions[currentAnswer];
 
-    document.getElementById('answer_1').innerHTML = answer['answer_1'];
-    document.getElementById('answer_2').innerHTML = answer['answer_2'];
-    document.getElementById('answer_3').innerHTML = answer['answer_3'];
-    document.getElementById('answer_4').innerHTML = answer['answer_4'];
-} */
+function answer(selection) {
+  let question = questions[currentQuestion];
+  console.log('Selected answer is ', selection);
+  let selectedQuestionNumber = selection.id.split('_')[1];
+  console.log('selectedQuestionNumber is ', selectedQuestionNumber);
+  console.log('Current question is ', question['right_answer']);
+
+  if(selectedQuestionNumber == question['right_answer']) {
+    console.log('Richtige Antwort!!');
+  } else {
+    console.log('Falsche Antwort!!!');
+  }
+}

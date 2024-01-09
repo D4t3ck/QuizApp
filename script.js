@@ -80,13 +80,18 @@ function showQuestion() {
 function answer(selection) {
   let question = questions[currentQuestion];
   console.log('Selected answer is ', selection);
-  let selectedQuestionNumber = selection.id.split('_')[1];
+  let selectedQuestionNumber = selection.slice(-1);
   console.log('selectedQuestionNumber is ', selectedQuestionNumber);
-  console.log('Current question is ', question['right_answer']);
+  console.log('Current right answer is ', question['right_answer']);
+
+  let idOfRightAnswer = `answer_${question['right_answer']}`;
 
   if(selectedQuestionNumber == question['right_answer']) {
     console.log('Richtige Antwort!!');
+    document.getElementById(selection).parentNode.classList.add('bg-success');
   } else {
-    console.log('Falsche Antwort!!!');
+    console.log('Falsche Antwort!!! Die richtige Antwort ist: 3');
+    document.getElementById(selection).parentNode.classList.add('bg-danger');
+    document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
   }
 }

@@ -153,3 +153,12 @@ function resetAnswerButtons() {
   document.getElementById("answer_4").parentNode.classList.remove("bg-danger");
   document.getElementById("answer_4").parentNode.classList.remove("bg-success");
 }
+
+function restartGame() {
+  document.getElementById('header-image').src = './img/pencil.jpg' ;
+  document.getElementById('questionBody').style = ''; // questionBody wieder anzeigen
+  document.getElementById('endScreen').style = 'display: none'; // Endscreen ausblenden
+  rightQuestions = 0;
+  currentQuestion = 0;
+  init();
+}

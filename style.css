@@ -35,3 +35,26 @@ body {
 .bg-success, .bg-danger {
     color: white !important;
 }
+
+
+.endScreen-img {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #1F485E;
+}
+
+.endscreen-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
